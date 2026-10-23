@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>猫猫站点-密码解锁</title>
+    <style>
+        body{background:#ffe6f2;text-align:center;padding-top:120px;font-size:18px;}
+        .box{background:#fff;padding:40px;border-radius:15px;width:320px;margin:0 auto;box-shadow:0 0 12px #ffb6d0;}
+        input{width:90%;margin:10px 0;padding:10px;border:1px solid #ffb6d0;border-radius:8px;}
+        button{background:#ff7fb8;color:white;border:none;padding:11px 30px;border-radius:8px;cursor:pointer;font-size:16px;}
+        .err{color:red}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>🐱猫猫网站密码锁</h2>
+        {% if error %}
+            <p class="err">{{error}}</p>
+        {% endif %}
+        <form method="post">
+            <input type="text" name="username" placeholder="输入账号" required>
+            <input type="password" name="password" placeholder="输入密码" required>
+            <button type="submit">解锁进入网站</button>
+        </form>
+    </div>
+</body>
+</html>
